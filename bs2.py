@@ -1,4 +1,5 @@
 def generatejson(numberoflines):
+    z=0
     import requests, bs4,re
     f=open('linksoutput.txt','r')
     web_link_all=[]
@@ -11,6 +12,8 @@ def generatejson(numberoflines):
     text_file.write("{")
     text_file.write("\n")
     for web_link in web_link_all:
+        print z
+        z=z+1
         try:
             t=web_link  #TITLE OF THE FILE ADDED
             res = requests.get(web_link)
